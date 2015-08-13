@@ -5,12 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <form action="#" th:action="@{/Setter}" th:object="${myForm}" method="post">
-        <p>Id: <input type="text" th:field="*{id}" /></p>
-        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-        <!--Text to send when submit is clicked: <input type="text" th:field="*{inputText}" />
-        <input type="button" value="Submit!" th:field="*{inputText}" />
-    -->
+    <form action="#" th:action="@{/Setter}" th:object="${Setter}" method="post">
+        <p>Message: <input type="text" th:field="*{message}" value="A" /></p>
+        <p><input type="submit" value="Submit" /></p>
+        <!--Text to send when submit is clicked: <input type="text" th:field="*{inputText}"  />
+        <input type="button" value="Submit!" th:field="*{inputText}" />-->
     </form>
 </body>
 </html>
