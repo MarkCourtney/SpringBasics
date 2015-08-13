@@ -5,6 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="${anid}">Some Text</p>
+    <form action="#" th:action="@{/Setter}" th:object="${myForm}" method="post">
+        <p>Id: <input type="text" th:field="*{id}" /></p>
+        <p><input type="submit" value="Submit" /></p>
+        <!--Text to send when submit is clicked: <input type="text" th:field="*{inputText}" />
+        <input type="button" value="Submit!" th:field="*{inputText}" />
+    -->
+    </form>
 </body>
 </html>

@@ -20,10 +20,15 @@ public class SetterWebPage {
     @Autowired
     ConfigurableApplicationContext context;
 
-    @RequestMapping("/Setter")
+
+    @RequestMapping(value="/Setter", method=RequestMethod.GET)
+    public String greetingForm(Model model) {
+        model.addAttribute("greeting", new Form());
+        return "greeting";
+    }
     //@RequestMapping(method = RequestMethod.POST)
-    public void getText(@ModelAttribute("anid") String value) {
-        System.out.println("Bunch of stuff " + value);
+    public void getText() {
+        //System.out.println("Bunch of stuff " + value);
         //return value;
     }
 
